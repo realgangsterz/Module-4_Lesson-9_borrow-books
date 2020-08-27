@@ -3,7 +3,7 @@ package com.codegym.cms.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "customers")
+@Table(name = "books")
 public class Book {
 
     @Id
@@ -11,6 +11,9 @@ public class Book {
     private Long id;
     private String name;
     private int quantity;
+
+    @OneToOne
+    private Guess guess;
 
 //    @ManyToOne
 //    @JoinColumn(name = "province_id")
@@ -29,6 +32,14 @@ public class Book {
 //        return String.format("Customer[id=%d, firstName='%s', lastName='%s',prodvince='%s'] ", id, firstName, lastName, province);
 //    }
 
+
+    public Guess getGuess() {
+        return guess;
+    }
+
+    public void setGuess(Guess guess) {
+        this.guess = guess;
+    }
 
     public Long getId() {
         return id;

@@ -19,6 +19,8 @@
         <th>Edit</th>
         <th>Delete</th>
         <th>Infor</th>
+        <th>Pay Book</th>
+
 
     </tr>
     <th:block th:each="book : ${books}">
@@ -29,6 +31,7 @@
             <td><a th:href="@{/edit-book/__${book.id}__ }">Edit</a></td>
             <td><a th:href="@{/delete-book/__${book.id}__ }">Delete</a></td>
             <td><a th:href="@{/infor-book/__${book.id}__ }">Borrow</a></td>
+            <td><a th:href="@{/infor-book/__${book.id}__ }">Pay</a></td>
         </tr>
     </th:block>
     <div>
